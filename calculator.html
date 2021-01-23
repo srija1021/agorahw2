@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Agora Homework 2</title>
+        <link rel="stylesheet" href="calcStyles.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="centerPane">
+            <div id="calcContainer">
+                <div id="headingText">
+                    <span>Basic Arithmetic!</span>
+                </div>
+                <br/>
+                <div id="inputBox">
+                    <input type="text" id="first" placeholder="Enter Number 1"/>
+                    <input type="text" id="second" placeholder="Enter Number 2"/>
+                </div>    
+                <br/>
+                <br/>
+                <div id="buttonContainer">
+                    <button class="operation" name="add" onclick = "add()">Add</button>
+                    <button class="operation" name="subtract" onclick = "subtract()">Subtract</button>
+                    <button class="operation" name="multiply" onclick = "multiply()">Multiply</button>
+                    <button class="operation" name="divide" onclick = "divide()">Divide</button>
+                </div>
+                <br/>
+                <div id="answerContainer">
+                    <input type="text" id="answer" placeholder="Answer" readonly="true"/>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function add(){
+                var first = document.getElementById("first").value
+                var second = document.getElementById("second").value
+                var sum = parseFloat(first) + parseFloat(second)
+                var answer = document.getElementById("answer")
+                answer.value = sum
+            }
+
+            function subtract(){
+                var first = document.getElementById("first").value
+                var second = document.getElementById("second").value
+                var difference = parseFloat(first) - parseFloat(second)
+                var answer = document.getElementById("answer")
+                answer.value = difference
+            }
+
+            function multiply(){
+                var first = document.getElementById("first").value
+                var second = document.getElementById("second").value
+                var product = parseFloat(first) * parseFloat(second)
+                var answer = document.getElementById("answer")
+                answer.value = product
+            }
+
+            function divide(){
+                var first = document.getElementById("first").value
+                var second = document.getElementById("second").value
+                var quotient = parseFloat(first) / parseFloat(second)
+                var answer = document.getElementById("answer")
+                answer.value = quotient
+            }
+        </script>
+    </body>
+</html>
